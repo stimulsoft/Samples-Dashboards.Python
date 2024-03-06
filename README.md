@@ -19,6 +19,7 @@ This repository has a Flask web project with a set of examples, each of which is
 * [Showing a Dashboard in the Viewer](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Showing_a_Dashboard_in_the_Viewer.py)
 * [Showing a Dashboard in the Viewer in an HTML template](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Showing_a_Dashboard_in_the_Viewer_in_an_HTML_template.py)
 * [Using a Handler in a Separate Function](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Using_a_Handler_in_a_Separate_Function.py)
+* [Using Parameters in SQL Query](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Using_Parameters_in_SQL_Query.py)
 * [Working with onDesign and onExit events](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Working_with_onDesign_and_onExit_events.py)
 
 Also, these examples are available for Django and Tornado frameworks. They have the same code for deploying and using components. They differ only in the functions used for a specific framework:
