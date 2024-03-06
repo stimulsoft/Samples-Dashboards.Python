@@ -11,8 +11,8 @@ def beginProcessData(args: StiDataEventArgs):
     
     # Here you can check any connection, data source and query parameters and change them
     # Any changes will not be sent to the client side
-    if args.dataSource == 'customers' and len(args.parameters) > 0:
-        args.parameters['Country'].value = 'Germany'
+    if args.dataSource == 'products' and len(args.parameters) > 0:
+        args.parameters['Category'].value = 5
 
 
 @app.route('/Using_Parameters_in_SQL_Query', methods = ['GET', 'POST'])
@@ -27,7 +27,7 @@ def index():
     
     # Creating a report object and loading a dashboard by URL
     report = StiReport()
-    reportUrl = url_for('static', filename = 'reports/WebsiteAnalytics.mrt')
+    reportUrl = url_for('static', filename = 'reports/SalesOfProducts.mrt')
     report.loadFile(reportUrl)
 
     # Assigning a report object to the viewer
