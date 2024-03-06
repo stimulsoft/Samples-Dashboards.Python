@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Exporting a Dashboard from Code</title>
+    <style>html, body { font-family: sans-serif }</style>
+
+    <!-- Rendering the necessary JavaScript for the dashboard engine -->
+    {{ reportJavaScript|safe }}
+</head>
+
+<body>
+    <h3>This example shows how you can export a dashboard from code.</h3>
+    <hr><br><br>
+    
+    <a href="{{ url_for('Exporting_a_Dashboard_from_Code.export') }}?format=pdf">Export to PDF</a><br>
+    <a href="{{ url_for('Exporting_a_Dashboard_from_Code.export') }}?format=excel">Export to Excel</a><br>
+    <a href="{{ url_for('Exporting_a_Dashboard_from_Code.export') }}?format=html">Export to HTML</a><br>
+
+    <!-- Rendering the HTML part of the dashboard engine and functions for exporting the report -->
+    {{ reportHtml|safe }}
+</body>
+
+</html>

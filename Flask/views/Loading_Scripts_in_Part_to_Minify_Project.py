@@ -1,0 +1,34 @@
+from flask import Blueprint, request, url_for
+from stimulsoft_reports.report import StiReport
+from stimulsoft_reports.designer import StiDesigner
+
+Loading_Scripts_in_Part_to_Minify_Project = app = Blueprint('Loading_Scripts_in_Part_to_Minify_Project', __name__)
+
+
+@app.route('/Loading_Scripts_in_Part_to_Minify_Project', methods = ['GET', 'POST'])
+def index():
+    # Creating a designer object
+    designer = StiDesigner()
+
+    # If the request processing was successful, you need to return the result to the client side
+    if designer.processRequest(request):
+        return designer.getFrameworkResponse()
+    
+    # Defining JavaScript modules required for the dashboard designer to work
+    designer.javascript.reportsSet = False
+    designer.javascript.blocklyEditor = False
+    designer.javascript.reportsChart = True
+    designer.javascript.reportsExport = True
+    designer.javascript.reportsImportXlsx = False
+    designer.javascript.reportsMaps = False
+    
+    # Creating a report object and loading a dashboard by URL
+    report = StiReport()
+    reportUrl = url_for('static', filename = 'reports/WebsiteAnalytics.mrt')
+    report.loadFile(reportUrl)
+
+    # Assigning a report object to the designer
+    designer.report = report
+
+    # Displaying the visual part of the designer as a prepared HTML page
+    return designer.getFrameworkResponse()

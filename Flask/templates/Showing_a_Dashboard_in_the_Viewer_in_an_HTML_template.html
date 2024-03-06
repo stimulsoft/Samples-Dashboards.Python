@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Showing a Dashboard in the Viewer in an HTML template</title>
+    <style>html, body { font-family: sans-serif }</style>
+
+    <!-- Rendering the necessary JavaScript for the viewer -->
+    {{ viewerJavaScript|safe }}
+</head>
+
+<body>
+    <!-- Rendering the visual HTML part of the viewer -->
+    {{ viewerHtml|safe }}
+</body>
+
+</html>
