@@ -1,11 +1,11 @@
 # Python and JavaScript samples for Stimulsoft Dashboards.PYTHON
 
-#### This repository contains the source code of the examples of usage Stimulsoft Dashboards.PYTHON analytics tool in the Python applications, using HTML/Python code and JavaScript components. The embedded dashboard components is fully compatible with Python 3.7 and higher. Full support for Flash, Django and Tornado frameworks, as well as work on any other frameworks.
+#### This repository contains the source code of the examples of usage Stimulsoft Dashboards.PYTHON analytics tool in the Python applications, using Python code and JavaScript analytics engine. The embedded dashboard components is fully compatible with Python 3.10 and higher. Full support for Flask, Django and Tornado frameworks, as well as work on any other frameworks.
 
 ## Overview
 This repository has a Flask web project with a set of examples, each of which is in a separate .py file:
 * [Changing an Export Settings on the Server-Side](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Changing_an_Export_Settings_on_the_Server_Side.py)
-* [Changing the Viewer Theme](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Changing_the_Viewer_Theme.py)
+* [Changing the Designer Theme](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Changing_the_Designer_Theme.py)
 * [Editing a Dashboard Template in the Designer](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Editing_a_Dashboard_Template_in_the_Designer.py)
 * [Editing a Dashboard Template in the Designer in an HTML template](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Editing_a_Dashboard_Template_in_the_Designer_in_an_HTML_template.py)
 * [Exporting a Dashboard from Code](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Exporting_a_Dashboard_from_Code.py)

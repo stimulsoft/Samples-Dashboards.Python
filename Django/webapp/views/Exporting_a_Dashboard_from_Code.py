@@ -18,6 +18,8 @@ def export(request):
         return report.getFrameworkResponse()
 
     # Loading a dashboard by URL
+    # This method does not load the report object on the server side, it only generates the necessary JavaScript code
+    # The dashboard will be loaded into a JavaScript object on the client side
     reportUrl = static('reports/WebsiteAnalytics.mrt')
     report.loadFile(reportUrl)
 
@@ -31,7 +33,9 @@ def export(request):
     elif requestFormat == 'html':
         exportFormat = StiExportFormat.HTML
 
-    # Calling a dashboard export to a specified format
+    # Calling the dashboard export to the specified format
+    # This method does not export the dashboard on the server side, it only generates the necessary JavaScript code
+    # The dashboard will be exported using a JavaScript engine on the client side
     report.exportDocument(exportFormat)
     
     # Getting the necessary JavaScript code and HTML part of the dashboard engine

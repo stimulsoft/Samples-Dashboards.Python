@@ -1,24 +1,17 @@
 from flask import Blueprint, request, url_for
 from stimulsoft_reports.report import StiReport
-from stimulsoft_reports.designer import StiDesigner
+from stimulsoft_reports.designer import StiDesigner, enums
 
-Localizing_the_Designer = app = Blueprint('Localizing_the_Designer', __name__)
+Changing_the_Designer_Theme = app = Blueprint('Changing_the_Designer_Theme', __name__)
 
 
-@app.route('/Localizing_the_Designer', methods = ['GET', 'POST'])
+@app.route('/Changing_the_Designer_Theme', methods = ['GET', 'POST'])
 def index():
-    # Creating a designer object 
+    # Creating a designer object
     designer = StiDesigner()
 
-    # Defining the required interface localization
-    # The list of available localizations can be obtained from the GitHub repository:
-    # https://github.com/stimulsoft/Stimulsoft.Reports.Localization
-    designer.options.localization = 'de.xml'
-
-    # Additionally, it is possible to add optional localizations
-    # They will be displayed in the localization menu in the designer panel
-    designer.options.localizations.append('es.xml')
-    designer.options.localizations.append('pt.xml')
+    # Defining designer options: interface theme
+    designer.options.appearance.theme = enums.StiDesignerTheme.OFFICE_2022_BLACK_GREEN
 
     # If the request processing was successful, you need to return the result to the client side
     if designer.processRequest(request):
