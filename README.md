@@ -6,9 +6,11 @@
 This repository has a Flask web project with a set of examples, each of which is in a separate .py file:
 * [Changing an Export Settings on the Server-Side](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Changing_an_Export_Settings_on_the_Server_Side.py)
 * [Changing the Designer Theme](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Changing_the_Designer_Theme.py)
+* [Configuring and Installing Node.js](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Configuring_and_Installing_Node_js.py)
 * [Editing a Dashboard Template in the Designer](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Editing_a_Dashboard_Template_in_the_Designer.py)
 * [Editing a Dashboard Template in the Designer in an HTML template](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Editing_a_Dashboard_Template_in_the_Designer_in_an_HTML_template.py)
 * [Exporting a Dashboard from Code](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Exporting_a_Dashboard_from_Code.py)
+* [Exporting a Dashboard from Code on the Server-Side](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Exporting_a_Dashboard_from_Code_on_the_Server_Side.py)
 * [How to Activate the Product](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/How_to_Activate_the_Product.py)
 * [Loading Scripts in Part to Minify Project](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Loading_Scripts_in_Part_to_Minify_Project.py)
 * [Localizing the Designer](https://github.com/stimulsoft/Samples-Dashboards.Python/blob/main/Flask/views/Localizing_the_Designer.py)

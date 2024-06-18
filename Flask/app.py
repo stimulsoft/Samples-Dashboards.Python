@@ -20,6 +20,8 @@ app.register_blueprint(Saving_a_Dashboard_Template_on_the_Server_Side)
 app.register_blueprint(Sending_an_Exported_Dashboard_to_the_Server_Side)
 app.register_blueprint(Setting_Dashboard_Variables_on_the_Server_Side)
 app.register_blueprint(Using_Parameters_in_SQL_Query)
+app.register_blueprint(Configuring_and_Installing_Node_js)
+app.register_blueprint(Exporting_a_Dashboard_from_Code_on_the_Server_Side)
 
 @app.route('/')
 def index():

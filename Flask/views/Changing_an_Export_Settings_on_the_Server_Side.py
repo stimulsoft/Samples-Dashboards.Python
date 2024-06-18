@@ -15,8 +15,9 @@ def beginExportReport(args: StiExportEventArgs):
 
     # You can change export settings, the set of settings depends on the export type
     if args.format == StiExportFormat.PDF:
-        args.settings['creatorString'] = 'My Company Name (c) YEAR'
-        args.settings['allowEditable'] = False
+        settings: StiPdfExportSettings = args.settings
+        settings.creatorString = 'My Company Name (c) YEAR'
+        settings.embeddedFonts = False
 
 
 @app.route('/Changing_an_Export_Settings_on_the_Server_Side', methods = ['GET', 'POST'])
