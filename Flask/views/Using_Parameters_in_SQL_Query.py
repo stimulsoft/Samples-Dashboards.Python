@@ -19,6 +19,7 @@ def beginProcessData(args: StiDataEventArgs):
 def index():
     # Creating a viewer object and defining Python events
     viewer = StiViewer()
+    viewer.javascript.appendHead('<link rel="shortcut icon" href="' + url_for('static', filename = 'favicon.ico') + '" type="image/x-icon">')
 
     # Defining viewer events
     # When assigning a function name as a string, it will be called on the JavaScript client side

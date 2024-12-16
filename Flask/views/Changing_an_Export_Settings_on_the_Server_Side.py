@@ -1,5 +1,6 @@
 from flask import Blueprint, request, url_for
 from stimulsoft_reports.events import StiExportEventArgs
+from stimulsoft_reports.export import StiPdfExportSettings
 from stimulsoft_reports.report import StiReport
 from stimulsoft_reports.report.enums import StiExportFormat
 from stimulsoft_reports.viewer import StiViewer
@@ -24,6 +25,7 @@ def beginExportReport(args: StiExportEventArgs):
 def index():
     # Creating a viewer object
     viewer = StiViewer()
+    viewer.javascript.appendHead('<link rel="shortcut icon" href="' + url_for('static', filename = 'favicon.ico') + '" type="image/x-icon">')
 
     # Defining viewer events
     # When assigning a function name as a string, it will be called on the JavaScript client side

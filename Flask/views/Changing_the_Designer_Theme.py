@@ -9,6 +9,7 @@ Changing_the_Designer_Theme = app = Blueprint('Changing_the_Designer_Theme', __n
 def index():
     # Creating a designer object
     designer = StiDesigner()
+    designer.javascript.appendHead('<link rel="shortcut icon" href="' + url_for('static', filename = 'favicon.ico') + '" type="image/x-icon">')
 
     # Defining designer options: interface theme
     designer.options.appearance.theme = enums.StiDesignerTheme.OFFICE_2022_BLACK_GREEN
