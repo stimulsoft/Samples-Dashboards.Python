@@ -1,8 +1,9 @@
 from flask import Blueprint, request, url_for
+from stimulsoft_dashboards.export import StiPdfDashboardExportSettings
+from stimulsoft_dashboards.export.enums import StiDashboardScaleMode
 from stimulsoft_reports.events import StiExportEventArgs
-from stimulsoft_reports.export import StiPdfExportSettings
 from stimulsoft_reports.report import StiReport
-from stimulsoft_reports.report.enums import StiExportFormat
+from stimulsoft_reports.report.enums import StiExportFormat, StiPageOrientation
 from stimulsoft_reports.viewer import StiViewer
 
 Changing_an_Export_Settings_on_the_Server_Side = app = Blueprint('Changing_an_Export_Settings_on_the_Server_Side', __name__)
@@ -16,9 +17,9 @@ def beginExportReport(args: StiExportEventArgs):
 
     # You can change export settings, the set of settings depends on the export type
     if args.format == StiExportFormat.PDF:
-        settings: StiPdfExportSettings = args.settings
-        settings.creatorString = 'My Company Name (c) YEAR'
-        settings.embeddedFonts = False
+        settings: StiPdfDashboardExportSettings = args.settings
+        settings.scaleMode = StiDashboardScaleMode.PAPER_SIZE
+        settings.orientation = StiPageOrientation.LANDSCAPE
 
 
 @app.route('/Changing_an_Export_Settings_on_the_Server_Side', methods = ['GET', 'POST'])
