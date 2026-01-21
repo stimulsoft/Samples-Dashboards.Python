@@ -37,6 +37,9 @@ Before starting, you should install the framework and component libraries used i
 After that, in your browser, you can navigate to the following address:  
 http://127.0.0.1:8040/
 
+Before running the server-side examples for dashboard generation and export, you need to run the `Configuring and Installing Node.js` script first. This script verifies the installed Node.js version and installs all required Node.js dependencies needed for working with dashboards on the server.
+
+
 ## About Stimulsoft Dashboards.PYTHON
 Introducing Dashboards.PYTHON - a fast and powerful tool for creating analytical dashboards in services and projects written in Python. The product includes a JavaScript data processing engine, a designer component for creating dashboards, and a fully interactive viewer for viewing ready-made dashboards on the screen of any device.
 
